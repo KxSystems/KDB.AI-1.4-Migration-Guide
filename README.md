@@ -1,4 +1,4 @@
-# KDB.AI 1.4 Migration Guide
+# KDB.AI 1.4 Code Migration Guide
 
 We have introduced powerful changes in KDB.AI 1.4 that improve indexing, table management, hybrid search, and integration with KDB+. These updates bring significant benefits, including improved performance, scalability, and flexibility for managing AI workloads, but they also necessitate changes to your existing code. This guide will help you navigate those changes to ensure a smooth migration from previous versions to version 1.4.
 
