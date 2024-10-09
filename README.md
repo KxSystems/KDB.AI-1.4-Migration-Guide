@@ -39,6 +39,7 @@ schema = {
         {"name": "embeddings", "vectorIndex": {"dims": 384, "metric": "CS", "type": "flat"}},
     ]
 }
+
 table = database.create_table("my_table", schema=schema)
 ```
 
