@@ -127,8 +127,6 @@ results = table.search(
 
 We understand this migration might be challenging, and our support team is ready to help. Please reach out via our community Slack at kx.com/slack if you have any questions.
 
-Your efforts to migrate to version 1.4 will contribute to a more stable and efficient experience for everyone. Let's make this transition together!
-
 Best regards,\
 Michael Ryaboy\
 Developer Advocate, KDB.AI Team
