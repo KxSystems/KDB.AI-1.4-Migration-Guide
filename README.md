@@ -49,6 +49,7 @@ schema = [
     {"name": "id", "type": "str"},
     {"name": "vectors", "type": "float64s"}
 ]
+
 indexes = [
     {
         "name": "vectorIndex", "type": "flat",
@@ -56,6 +57,7 @@ indexes = [
         "column": "vectors"
     }
 ]
+
 table = database.create_table("my_table", schema=schema, indexes=indexes)
 ```
 
