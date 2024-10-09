@@ -1,6 +1,6 @@
 # KDB.AI 1.4 Code Migration Guide
 
-We have introduced powerful changes in KDB.AI 1.4 that improve indexing, table management, hybrid search, and integration with KDB+. These updates bring significant benefits, including improved performance, scalability, and flexibility for managing AI workloads, but they also necessitate changes to your existing code. This guide will help you navigate those changes to ensure a smooth migration from previous versions to version 1.4.
+We have introduced powerful changes in KDB.AI 1.4 that improve indexing, table management, hybrid search, and integration with kdb+. These updates bring significant benefits, including improved performance, scalability, and flexibility for managing AI workloads, but they also necessitate changes to your existing code. This guide will help you navigate those changes to ensure a smooth migration from previous versions to version 1.4.
 
 ## What Has Changed
 
@@ -9,7 +9,7 @@ The KDB.AI 1.4 update introduces several key changes:
 1. **Multi-Index Support**: You can now create and use multiple indexes on a single table, allowing for enhanced search capabilities, including assigning weights to indexes.
 2. **Database Layer Above Tables**: A new database layer improves organization and management by allowing a database to contain multiple tables.
 3. **Enhanced Index Management**: New APIs for creating, deleting, and updating indexes provide greater control.
-4. **KDB+ Integration Improvements**: Seamless reference and indexing of KDB+ tables directly from KDB.AI, including running Time Series Similarity (TSS) searches.
+4. **kdb+ Integration Improvements**: Seamless reference and indexing of kdb+ tables directly from KDB.AI, including running Time Series Similarity (TSS) searches.
 5. **New q API and Enhanced REST API**: Expanded developer experience, including a public q API and improved RESTful API design.
 
 ## Important Migration Notice
