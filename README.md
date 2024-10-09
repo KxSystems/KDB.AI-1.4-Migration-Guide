@@ -125,7 +125,7 @@ results = table.search(
 
 ## Support
 
-We understand this migration might be challenging, and our support team is ready to help. Please reach out via our community Slack at kx.com/slack if you have any questions.
+We understand this migration might be challenging, and our support team is ready to help. Please reach out via our community Slack at [kx.com/slack](https://kx.com/slack) and post in the **#kdbai** channel if you have any questions.
 
 Best regards,\
 Michael Ryaboy\
