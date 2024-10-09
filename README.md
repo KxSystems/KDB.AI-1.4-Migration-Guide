@@ -17,7 +17,7 @@ The KDB.AI 1.4 update introduces several key changes:
 KDB.AI version 1.4 will be released on **October 17th**. This update introduces breaking changes that will affect all current applications, especially those in production. Applications will need to undergo **downtime** in order to upgrade.
 
 - **Migration Timing**: You will not be able to migrate until version 1.4 is released in the cloud on October 17th. Once released, it is recommended that you migrate **immediately**, as previous versions will no longer function correctly.
-- **Server Versions**: If you are using server version 1.2 or 1.3, migration is not mandatory, and there will be no breaking changes. However, it is recommended that you upgrade your server to version 1.4 to ensure future compatibility. Always ensure that you are using the same version of the KDB.AI client library as your server instance.
+- **Server Versions**: If you are using server version 1.2 or 1.3, migration is not mandatory, and there will be no breaking changes. However, it is recommended that you upgrade your server to version 1.4 to ensure future compatibility. Always ensure that you are using the same version of the KDB.AI client library as your server instance. If you upgrade your server version, you will also have to update your code.
 
 While these changes include significant benefits, they require immediate action for those relying on previous versions in production environments. We believe this will create a more robust product in the long term, making the experience better for all users.
 
