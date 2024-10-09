@@ -96,7 +96,7 @@ results = table.search(vectors=[query_vector], n=3)
 results = table.search(vectors={'vectorIndex': [query_vector]}, n=3)
 ```
 
-### 4. Hybrid Search Example
+### 4. Multi-Index Search (Hybrid Search Example)
 
 Hybrid search in KDB.AI 1.4 allows users to combine sparse and dense vector searches to improve relevancy.
 
