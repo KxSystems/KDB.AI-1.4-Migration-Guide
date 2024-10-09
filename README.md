@@ -98,7 +98,7 @@ results = table.search(vectors={'vectorIndex': [query_vector]}, n=3)
 
 ### 4. Multi-Index Search (Hybrid Search Example)
 
-Hybrid search in KDB.AI 1.4 is an example of the 1.4 multi-index search capability, allows users to combine sparse and dense vector indexes to improve relevancy.
+Hybrid search in KDB.AI 1.4 is an example of the 1.4's multi-index search capability, allows users to combine sparse and dense vector indexes to improve relevancy.
 
 #### Old Syntax for Hybrid Search:
 
