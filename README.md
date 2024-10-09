@@ -11,7 +11,6 @@ The KDB.AI 1.4 update introduces several key changes:
 3. **Enhanced Index Management**: New APIs for creating, deleting, and updating indexes provide greater control.
 4. **KDB+ Integration Improvements**: Seamless reference and indexing of KDB+ tables directly from KDB.AI, including running Time Series Similarity (TSS) searches.
 5. **New q API and Enhanced REST API**: Expanded developer experience, including a public q API and improved RESTful API design.
-6. **Hybrid Search**: A new feature allowing combined sparse and dense search, improving result relevancy for a variety of use cases.
 
 ## Important Migration Notice
 
