@@ -6,8 +6,8 @@ We have introduced powerful changes in KDB.AI 1.4 that improve indexing, table m
 
 The KDB.AI 1.4 update introduces several key changes:
 
-1. **Multi-Index Support**: You can now create and use multiple indexes on a single table, allowing for enhanced search capabilities, including assigning weights to indexes.
-2. **Database Layer Above Tables**: A new database layer improves organization and management by allowing a database to contain multiple tables.
+1. **Database Layer Above Tables**: A new database layer improves organization and management by allowing a database to contain multiple tables.
+2. **Multi-Index Support**: You can now create and use multiple indexes on a single table, allowing for enhanced search capabilities, including assigning weights to indexes.
 3. **Enhanced Index Management**: New APIs for creating, deleting, and updating indexes provide greater control.
 4. **kdb+ Integration Improvements**: Seamless reference and indexing of kdb+ tables directly from KDB.AI, including running Time Series Similarity (TSS) searches.
 5. **New q API and Enhanced REST API**: Expanded developer experience, including a public q API and improved RESTful API design.
@@ -25,9 +25,28 @@ While these changes include significant benefits, they require immediate action 
 
 Follow these steps to migrate your code from previous versions to version 1.4.
 
-### 1. Table Creation Syntax Changes
+### 1. Adding the Database Layer
 
-In version 1.4, table creation requires the explicit separation of schema and index definitions, allowing multiple indexes to be defined on the same table. Schema definition syntax has also been simplified. We now recommend using 'float64s' as the type for vectorIndexes. 
+The new version introduces a database layer to manage tables, making data organization more scalable. You must now create or connect to a database before creating tables. The 'default' database always exists and will be used when there is only one database. It cannot be deleted, but the tables within it can be managed or deleted.
+
+#### Old Syntax:
+
+```python
+session = kdbai.Session(api_key=API_KEY, endpoint=ENDPOINT)
+table = session.table("my_table")
+```
+
+#### New Syntax:
+
+```python
+session = kdbai.Session(api_key=API_KEY, endpoint=ENDPOINT)
+database = session.database('default')
+table = database.table("my_table")
+```
+
+### 2. Table Creation Syntax Changes
+
+In version 1.4, table creation requires the explicit separation of schema and index definitions, allowing multiple indexes to be defined on the same table. Schema definition syntax has also been simplified. We now recommend using 'float64s' as the type for vectorIndexes.
 
 #### Old Syntax:
 
@@ -61,25 +80,6 @@ indexes = [
 table = database.create_table("my_table", schema=schema, indexes=indexes)
 ```
 
-### 2. Adding the Database Layer
-
-The new version introduces a database layer to manage tables, making data organization more scalable. You must now create or connect to a database before creating tables. The 'default' database always exists and will be used when there is only one database. It cannot be deleted, but the tables within it can be managed or deleted.
-
-#### Old Syntax:
-
-```python
-session = kdbai.Session(api_key=API_KEY, endpoint=ENDPOINT)
-table = session.table("my_table")
-```
-
-#### New Syntax:
-
-```python
-session = kdbai.Session(api_key=API_KEY, endpoint=ENDPOINT)
-database = session.database('default')
-table = database.table("my_table")
-```
-
 ### 3. Search Method Updates
 
 The search method has been updated to reference specific indexes, allowing for simultaneous multi-index searches with weight assignment. You must now explicitly include the index you want to search.
@@ -98,7 +98,7 @@ results = table.search(vectors={'vectorIndex': [query_vector]}, n=3)
 
 ### 4. Multi-Index Search (Hybrid Search Example)
 
-Hybrid search in KDB.AI 1.4 is an example of the 1.4's multi-index search capability, allows users to combine sparse and dense vector indexes to improve relevancy.
+Hybrid search in KDB.AI 1.4 is an example of the multi-index search capability, allowing users to combine sparse and dense vector indexes to improve relevancy.
 
 #### Old Syntax for Hybrid Search:
 
